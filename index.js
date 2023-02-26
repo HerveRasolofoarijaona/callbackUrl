@@ -11,16 +11,9 @@ app.put('/users/:id', (req, res) => {
   const { id } = req.params
   const updateCallBack = req.body
   const date = Date.now();
-  if (index !== -1) {
-    // users[index] = updatedUser
     res.send([
         {updateCallBack,date}
     ])
-    
-    console.log('Client call Put API')
-  } else {
-    res.status(404).send('User not found')
-  }
 })
 
 
