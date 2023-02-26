@@ -1,6 +1,6 @@
 const express = require('express')
 const MongoClient = require('mongodb').MongoClient;
-const url ='mongodb+srv://startuplova:<password>@cluster0.kcxgiqe.mongodb.net/?retryWrites=true&w=majority'
+const url ='mongodb+srv://startuplova:nwD1imRLYV6JYTuf@cluster0.kcxgiqe.mongodb.net/?retryWrites=true&w=majority'
 
 
 const app = express()
