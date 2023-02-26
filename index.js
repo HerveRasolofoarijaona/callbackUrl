@@ -10,9 +10,7 @@ const listener = app.listen(process.env.PORT, function() {
 app.put('/users/:id', (req, res) => {
   const { id } = req.params
   const updateCallBack = req.body
-//   console.log(updatedUser)
   const date = Date.now();
-  const index = users.findIndex(user => user.id === parseInt(id))
   if (index !== -1) {
     // users[index] = updatedUser
     res.send([
