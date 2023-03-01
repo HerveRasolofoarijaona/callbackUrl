@@ -39,6 +39,7 @@ app.get('/',(req,res)=>{
   const ipAddress = req.connection.remoteAddress;
 
   res.send([{
+    ipAddress,
     base    
   }]);
 });
