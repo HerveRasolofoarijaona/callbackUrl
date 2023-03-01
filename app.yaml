@@ -1,2 +1,8 @@
-runtime: nodejs14
-env: standard
+steps:
+-name : node
+ entrypoint: npm
+ args: ['install']
+
+-name: node
+ entrypoint: npm
+ args: ['run']
