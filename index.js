@@ -1,4 +1,5 @@
 const express = require('express')
+const IP = require('ip')
 
 // test:TJUQ92IHuWVHncVY
 
@@ -22,7 +23,9 @@ const connection = mysql.createConnection({
 app.use(express.json())
 
 const listener = app.listen(process.env.PORT, function() {
+    const ipAddress = IP.address();
     console.log("Your app is listening on port " + listener.address().port)
+    console.log("Your app is listening on ip " + ipAddress)
   });
 
 app.get('/',(req,res)=>{
@@ -36,7 +39,7 @@ app.get('/',(req,res)=>{
     base = 'Connected';
   });
 
-  const ipAddress = req.connection.remoteAddress;
+  const ipAddress = IP.address();
 
   res.send([{
     ipAddress,
