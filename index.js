@@ -36,10 +36,9 @@ app.get('/',(req,res)=>{
     base = 'Connected';
   });
 
-  const ipAddress = req.socket.remoteAddress;
+  const ipAddress = req.connection.remoteAddress;
 
   res.send([{
-    ipAddress,
     base    
   }]);
 });
