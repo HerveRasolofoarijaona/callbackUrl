@@ -16,15 +16,11 @@ const connection = mysql.createConnection({
   database: 'banyta1xrvb3umtoagof'
 });
 
-
-
-
-
 app.use(express.json())
 app.set('trust proxy', true);
 
 const PORT = process.env.PORT || 8080;
-
+e
 const listener = app.listen(process.env.PORT, function() {
     const ipAddress = IP.address();
     console.log("Your app is listening on port " + listener.address().port)
