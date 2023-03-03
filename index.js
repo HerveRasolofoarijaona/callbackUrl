@@ -21,6 +21,9 @@ const connection = mysql.createConnection({
 
 
 app.use(express.json())
+app.set('trust proxy', true);
+
+const PORT = process.env.PORT || 8080;
 
 const listener = app.listen(process.env.PORT, function() {
     const ipAddress = IP.address();

@@ -1,8 +1,1 @@
-steps:
--name : node
- entrypoint: npm
- args: ['install']
-
--name: node
- entrypoint: npm
- args: ['run']
+runtime: nodejs16
