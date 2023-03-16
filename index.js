@@ -75,6 +75,29 @@ connection.query('INSERT INTO authors SET ?', author, (err, res) => {
   console.log('Last insert ID:', res.insertId);
 });
 
+});
 
+app.post('/users/:id', (req, res) => {
 
- })
+  const correlationId = req.params.id;
+
+let objectid;
+
+connection.query('SELECT objectid FROM authors WHERE correlationid = ?', correlationId, (error, results, fields) => {
+  if (error) throw error;
+  
+  // Access the objectid value
+  // const objectid = JSON.parse(results.objectid).objectreference;
+
+  objectid = JSON.parse(results[0].objectid)
+
+  res.send([{
+    correlationId,
+    objectid
+  }]);
+
+});
+
+// connection.end();
+
+});
